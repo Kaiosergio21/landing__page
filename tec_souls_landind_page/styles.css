@@ -1,0 +1,234 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo */
+    background: rgb(194, 167, 15); /* Define a cor de fundo do corpo */
+}
+
+/* Estilo da sidebar */
+.sidebar {
+    height: 100%; /* Altura completa da tela */
+    width: 0; /* Largura inicial da sidebar */
+    position: fixed; /* Fixa a posição da sidebar */
+    z-index: 1; /* Define a profundidade da sidebar */
+    top: 0; /* Alinha a sidebar ao topo */
+    left: 0; /* Alinha a sidebar à esquerda */
+    background-color: #111; /* Cor de fundo da sidebar */
+    overflow-x: hidden; /* Oculta overflow horizontal */
+    transition: 0.5s; /* Transição suave para abertura e fechamento */
+    padding-top: 60px; /* Espaçamento superior dentro da sidebar */
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-size: 25px; /* Tamanho da fonte dos links */
+    color: #818181; /* Cor do texto dos links */
+    display: block; /* Exibe os links como blocos */
+    transition: 0.3s; /* Transição suave para hover */
+}
+
+.sidebar a:hover {
+    color: #f1f1f1; /* Cor do texto ao passar o mouse */
+}
+
+.sidebar .closebtn {
+    position: absolute; /* Posição absoluta */
+    top: 0; /* Alinha ao topo */
+    right: 25px; /* Alinha à direita */
+    font-size: 36px; /* Tamanho da fonte do botão de fechar */
+    margin-left: 50px; /* Espaçamento à esquerda */
+}
+
+/* Estilo do conteúdo principal */
+#main {
+    transition: margin-left .5s; /* Transição suave para margem esquerda */
+    padding: 1px; /* Espaçamento interno */
+}
+
+.openbtn {
+    font-size: 20px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+    background-color: #111; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+}
+
+.openbtn:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do carrossel */
+.carousel {
+    position: relative; /* Posição relativa */
+    max-width: 100%; /* Largura máxima */
+    margin: auto; /* Centraliza o carrossel */
+}
+
+.slides {
+    display: flex; /* Exibe slides em flexbox */
+    justify-content: center; /* Centraliza slides horizontalmente */
+}
+
+.product_1 {
+    margin-top: 10%; /* Espaçamento superior */
+    background: black; /* Fundo preto */
+    color: rgb(194, 167, 15); /* Cor do texto */
+    height: 300px; /* Altura do produto */
+    width: 300px; /* Largura do produto */
+    padding: 5%; /* Espaçamento interno */
+    border-radius: 10%; /* Bordas arredondadas */
+}
+
+.cube {
+    position: relative; /* Posição relativa */
+    top: 2%; /* Espaçamento superior */
+    left: 10%; /* Espaçamento à esquerda */
+    margin-bottom: 20%; /* Espaçamento inferior */
+    width: 400px; /* Largura do contêiner da imagem */
+    height: 120px; /* Altura do contêiner da imagem */
+}
+
+.cube img {
+    height: 130%; /* Altura da imagem */
+    width: 60%; /* Largura da imagem */
+}
+
+.titles_1 {
+    padding-left: 20px; /* Espaçamento à esquerda dos títulos */
+}
+
+.titles_1 h1 {
+    padding-bottom: 5px; /* Espaçamento inferior do título */
+}
+
+.titles_1 p {
+    margin-top: -4%; /* Margem superior negativa */
+}
+
+.prev, .next {
+    cursor: pointer; /* Cursor de ponteiro */
+    position: absolute; /* Posição absoluta */
+    top: 50%; /* Alinha ao meio verticalmente */
+    width: auto; /* Largura automática */
+    padding: 16px; /* Espaçamento interno */
+    margin-top: -22px; /* Margem superior negativa */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: 0.6s ease; /* Transição suave */
+    border-radius: 0 3px 3px 0; /* Bordas arredondadas */
+    user-select: none; /* Desativa seleção de texto */
+}
+
+.next {
+    margin-top: -100px; /* Margem superior negativa */
+    width: 200px; /* Largura do botão */
+    height: 200px; /* Altura do botão */
+    right: 0; /* Alinha à direita */
+}
+
+.arrow {
+    display: flex; /* Exibe em flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    font-size: 100px; /* Tamanho da fonte */
+    margin-top: 30px; /* Margem superior */
+}
+
+.prev {
+    margin-top: -100px; /* Margem superior negativa */
+    width: 200px; /* Largura do botão */
+    height: 200px; /* Altura do botão */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8); /* Cor de fundo ao passar o mouse */
+}
+
+.dot {
+    cursor: pointer; /* Cursor de ponteiro */
+    height: 15px; /* Altura do ponto */
+    width: 15px; /* Largura do ponto */
+    margin: 0 2px; /* Margem horizontal */
+    margin-bottom: 30px; /* Margem inferior */
+    background-color: #bbb; /* Cor de fundo do ponto */
+    border-radius: 50%; /* Bordas arredondadas */
+    display: inline-block; /* Exibe como bloco inline */
+    transition: background-color 0.6s ease; /* Transição suave */
+}
+
+.active, .dot:hover {
+    background-color: #717171; /* Cor de fundo ao ativar ou passar o mouse */
+}
+
+/* Animação de fade */
+.fade {
+    animation-name: fade; /* Nome da animação */
+    animation-duration: 1.5s; /* Duração da animação */
+}
+
+@keyframes fade {
+    from {opacity: .4} /* Opacidade inicial */
+    to {opacity: 1} /* Opacidade final */
+}
+
+/* Estilo da descrição */
+.discription {
+    display: grid; /* Exibe em grid */
+    grid-template-columns: auto auto; /* Duas colunas automáticas */
+    gap: 10px; /* Espaçamento entre itens do grid */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: center; /* Alinha itens horizontalmente */
+    background: rgb(0, 0, 0); /* Fundo preto */
+    color: rgb(194, 167, 15); /* Cor do texto */
+    height: 200px; /* Altura do contêiner */
+    padding: 5px; /* Espaçamento interno */
+    margin: -10px; /* Margem negativa */
+}
+
+ol {
+    display: flex; /* Exibe em flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding-top: 20px; /* Espaçamento superior */
+    padding-right: 300px; /* Espaçamento à direita */
+}
+
+ol p {
+    padding-left: 300px; /* Espaçamento à esquerda */
+}
+
+ol img {
+    width: 50%; /* Largura da imagem */
+    height: 40px; /* Altura da imagem */
+}
+
+.add {
+    display: flex; /* Exibe em flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-direction: row; /* Direção da flexbox em linha */
+    width: 400%; /* Largura do contêiner */
+    height: 100px; /* Altura do contêiner */
+    margin-top: -40px; /* Margem superior negativa */
+    margin-right: -35px; /* Margem direita negativa */
+}
+
+.add_2 {
+    display: flex; /* Exibe em flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.add_3 {
+    display: flex; /* Exibe em flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-direction: row; /* Direção da flexbox em linha */
+    width: 400%; /* Largura do contêiner */
+    height: 100px; /* Altura do contêiner */
+    margin-top: 15px; /* Margem superior */
+}
+
+.add_4 {
+    display: flex; /* Exibe em flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: -8px; /* Margem superior negativa */
+    margin-right: 20px; /* Margem direita */
+}

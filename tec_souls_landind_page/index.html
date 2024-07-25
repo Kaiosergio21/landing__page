@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <title>Sidebar Retrátil com Carrossel</title>
+    <!-- Título da página -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link para o arquivo de estilos CSS -->
+</head>
+<body>
+    <!-- Sidebar retrátil -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <!-- Botão para fechar a sidebar -->
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+        <!-- Links para as diferentes seções do site -->
+    </div>
+
+    <div id="main">
+        <!-- Botão para abrir a sidebar -->
+        <button class="openbtn" onclick="openNav()">☰ Abrir Sidebar</button>
+        <h2>Conteúdo Principal</h2>
+        <p>Este é o conteúdo principal da página.</p>
+
+        <!-- Carrossel de produtos -->
+        <div class="carousel">
+            <div class="slides">
+                <!-- Slide 1 -->
+                <div class="slide fade">
+                    <div class="product_1">
+                        <div class="cube"><img src="image/bola.webp" alt=""></div>
+                        <!-- Imagem do produto -->
+                        <div class="titles_1">
+                            <h1>bola</h1>
+                            <h4>R$ 50,00</h4>
+                            <p>frete gratis</p>
+                        </div>
+                        <!-- Informações do produto -->
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide fade">
+                    <div class="product_1">
+                        <div class="cube"><img src="image/carro.webp" alt=""></div>
+                        <!-- Imagem do produto -->
+                        <div class="titles_1">
+                            <h1>carro</h1>
+                            <h4>R$ 50,00</h4>
+                            <p>frete gratis</p>
+                        </div>
+                        <!-- Informações do produto -->
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide fade">
+                    <div class="product_1">
+                        <div class="cube"><img src="image/xadrez.webp" alt=""></div>
+                        <!-- Imagem do produto -->
+                        <div class="titles_1">
+                            <h1>xadrez</h1>
+                            <h4>R$ 50,00</h4>
+                            <p>frete gratis</p>
+                        </div>
+                        <!-- Informações do produto -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões de navegação do carrossel -->
+            <a class="prev" onclick="plusSlides(-1)"><p class="arrow">«</p></a>
+            <a class="next" onclick="plusSlides(1)"><p class="arrow">»</p></a>
+        </div>
+
+        <br>
+
+        <!-- Pontos de navegação do carrossel -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </div>
+    
+    <!-- Seção de descrição com informações de contato -->
+    <div class="discription">
+        <ol>
+            <p class="add_3"><img src="image/phone.png" class="add_4"> telefone</p>
+            <p class="add_2"><img src="image/aderess.png" class="add"> endereço</p>
+            <p class="add_3"><img src="image/whatsapp.png" class="add_4"> whatsapp</p>
+        </ol>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
